@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ image_id: req.body.image_id, question: req.body.question }),
-    }));
+    }, req));
   } catch (err) {
     sendError(res, err);
   }

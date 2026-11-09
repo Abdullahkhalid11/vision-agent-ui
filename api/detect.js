@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": contentType },
       body: raw,
-    }));
+    }, req));
   } catch (err) {
     if (err instanceof TooLargeError) {
       return res.status(413).json({ error: err.message });

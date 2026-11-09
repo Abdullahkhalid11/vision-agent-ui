@@ -2,6 +2,7 @@
   "functions": {
     "api/ask.js": { "maxDuration": 30 },
     "api/detect.js": { "maxDuration": 30 },
+    "api/run.js": { "maxDuration": 10 },
     "api/health.js": { "maxDuration": 10 }
   }
 }
