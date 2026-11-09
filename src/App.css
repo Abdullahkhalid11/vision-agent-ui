@@ -1,0 +1,42 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --text: #e8eaf0;
+  --muted: #9aa3b2;
+  --accent: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+.app { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin: 0 0 8px; font-size: 2rem; }
+h2 { margin: 0 0 12px; font-size: 1.15rem; }
+.lede { color: var(--muted); line-height: 1.5; max-width: 70ch; }
+.status { font-size: 0.9rem; color: var(--muted); }
+.status.up { color: var(--accent); }
+.status.down { color: var(--warn); }
+.panel { background: var(--panel); border-radius: 12px; padding: 20px; margin-top: 16px; }
+.two-col { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; }
+@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
+.box-canvas { width: 100%; height: auto; border-radius: 8px; background: #000; }
+.file-pick { display: inline-block; cursor: pointer; }
+.file-pick input { display: block; margin-bottom: 8px; color: var(--text); }
+.file-pick span { color: var(--muted); font-size: 0.9rem; }
+.busy { color: var(--warn); }
+.error { color: var(--danger); }
+.note { color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+.slider { display: block; margin: 12px 0; color: var(--muted); font-size: 0.9rem; }
+.slider input { width: 100%; }
+.counts { padding-left: 18px; line-height: 1.8; }
+form { display: flex; gap: 8px; }
+.question { flex: 1; padding: 10px 12px; border-radius: 8px; border: 1px solid #2a2f3a; background: #0c0e12; color: var(--text); font-size: 1rem; }
+button { padding: 10px 16px; border-radius: 8px; border: 0; background: var(--accent); color: #05210f; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip { background: #232836; color: var(--text); font-weight: 500; padding: 6px 10px; }
+.answer { margin-top: 16px; padding: 14px; border-radius: 8px; background: #0c0e12; }
+.answer p { margin: 0 0 6px; line-height: 1.5; }
+footer { margin-top: 32px; color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
